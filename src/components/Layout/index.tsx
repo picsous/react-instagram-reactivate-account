@@ -2,9 +2,9 @@ import React from 'react';
 import {createStyles, makeStyles, Theme} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import {Redirect, Route, Switch} from 'react-router-dom';
-import About from "./About";
-import Core from "./Core";
-import NotFound from "./NotFound";
+import About from "../../pages/About";
+import Core from "../../pages/Core";
+import NotFound from "../../pages/NotFound";
 import Header from "./Header";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -40,7 +40,7 @@ function Copyright() {
     );
 }
 
-export default function Layout() {
+export default function Index() {
     const classes = useStyles();
     return (
         <div className={classes.root}>

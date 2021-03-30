@@ -5,14 +5,14 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import store from './store';
-import Layout from "./Layout";
+import Index from "./components/Layout";
 
 const App = () => (
     <React.StrictMode>
         <Provider store={store}>
             <Router>
                 <switch>
-                    <Layout/>
+                    <Index/>
                 </switch>
             </Router>
         </Provider>

@@ -5,15 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Profile from './Profile';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <div className="App">
-        <Route path="/" exact component={App} />
-        <Route path="/Profile" exact component={Profile} />
-      </div>
-  </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <div className="App">
+          <Route path="/" exact component={App} />
+          <Route path="/Profile" exact component={Profile} />
+        </div>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
